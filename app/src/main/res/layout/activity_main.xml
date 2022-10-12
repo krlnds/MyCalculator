@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/text_panjang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panjang / Alas / Diameter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/edtPanjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_panjang"
+        android:hint="Masukan Panjang / alas / Diameter"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/text_Lebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lebar / Tinggi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPanjang"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/edtLebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_Lebar"
+        android:hint="Masukan Lebar / Tinggi"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:id="@+id/Ll_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edtLebar"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnPersegi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/rectangle_small"
+            android:scaleType="fitCenter"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/matcha2"
+            android:text="Hitung Persegi"/>
+
+        <Button
+            android:id="@+id/btnSegitiga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/triangle_small"
+            android:scaleType="fitCenter"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/matcha2"
+            android:text="Hitung Segitiga"/>
+
+
+        <Button
+            android:id="@+id/btnOval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/oval_small"
+            android:scaleType="fitCenter"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/matcha2"
+            android:text="Hitung Lingkaran"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/Ll_Hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Ll_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/text_Luas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas : "
+            app:layout_constraintTop_toBottomOf="@+id/Ll_horizontal"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/text_Keliling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keliling : "
+            app:layout_constraintTop_toBottomOf="@+id/text_Luas"
+            android:layout_marginStart="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
